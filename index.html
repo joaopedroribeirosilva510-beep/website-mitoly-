@@ -1,297 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<title>Mitolyn Official | Natural Metabolism & Weight Support Supplement</title>
+<title>Mitolyn Blog | Mitochondrial Health, Energy & Metabolism Science</title>
 
-<meta name="description" content="Discover Mitolyn, a natural supplement designed to support metabolism, increase energy and promote healthy weight management. Order from the official website.">
+<meta name="description" content="Explore mitochondrial health, energy optimization, metabolism science and evidence-based strategies to improve vitality and performance.">
 
-<meta name="keywords" content="Mitolyn official, Mitolyn supplement, metabolism booster, natural weight loss, energy support">
-
-<meta name="robots" content="index, follow">
-
-<!-- Open Graph (Social Media) -->
-<meta property="og:title" content="Mitolyn Official - Natural Metabolism Support">
-<meta property="og:description" content="Boost your metabolism and support natural weight loss with Mitolyn.">
-<meta property="og:type" content="website">
-
-<!-- Google AdSense -->
-<script async 
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7510561537406870"
-crossorigin="anonymous"></script>
-
-<!-- Performance -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
+:root{--primary:#7c3aed;--accent:#06b6d4;--bg:#f8fafc;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:#1e293b;line-height:1.7;}
 
-/* RESET */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+header{background:white;padding:20px;display:flex;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,0.05);position:sticky;top:0;}
+.logo{font-size:26px;font-weight:800;background:linear-gradient(90deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 
-body{
-font-family: 'Arial', sans-serif;
-background:#f6f6f6;
-color:#333;
-line-height:1.6;
--webkit-font-smoothing:antialiased;
-}
+.hero{display:flex;align-items:center;justify-content:space-between;padding:100px 40px;gap:40px;background:linear-gradient(135deg,#ede9fe,#ecfeff);}
+.hero-text{max-width:600px;}
+.hero-text h1{font-size:3rem;margin-bottom:20px;}
+.hero-text p{color:#475569;}
+.hero img{width:420px;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.15);}
 
-/* CONTAINER */
-.container{
-max-width:1200px;
-margin:auto;
-padding:0 20px;
-}
+.section{max-width:1100px;margin:80px auto;padding:0 20px;}
+.card{background:white;padding:50px;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.06);}
 
-/* LOGO */
-.logo{
-text-align:center;
-font-size:40px;
-font-weight:700;
-letter-spacing:2px;
-margin:30px 0;
-background:linear-gradient(90deg,#ff2ea6,#ff7a00,#5ddcff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
+.highlight{background:linear-gradient(135deg,#faf5ff,#ecfeff);padding:25px;border-radius:14px;margin:30px 0;}
 
-/* HERO */
-.hero{
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-justify-content:space-between;
-gap:40px;
-padding:60px 0;
-}
+.faq-item{margin:15px 0;border-radius:12px;overflow:hidden;}
+.faq-question{width:100%;padding:20px;background:linear-gradient(90deg,#7c3aed,#06b6d4);color:white;border:none;text-align:left;font-weight:600;cursor:pointer;}
+.faq-answer{max-height:0;overflow:hidden;background:#f8fafc;transition:0.4s;padding:0 20px;}
+.faq-answer p{padding:20px 0;}
 
-.hero-text{
-flex:1;
-min-width:280px;
-}
+.fade{opacity:0;transform:translateY(30px);transition:0.8s;}
+.fade.show{opacity:1;transform:translateY(0);}
 
-.hero-text h1{
-font-size:40px;
-margin-bottom:20px;
-}
+footer{background:#0f172a;color:#94a3b8;text-align:center;padding:50px;margin-top:80px;}
 
-.hero-text p{
-font-size:18px;
-margin-bottom:30px;
-color:#555;
+@media(max-width:900px){
+.hero{flex-direction:column;text-align:center;}
+.hero img{width:100%;}
 }
-
-/* BUTTON */
-.btn{
-display:inline-block;
-padding:16px 35px;
-background:#ff2ea6;
-color:white;
-font-weight:bold;
-border-radius:50px;
-text-decoration:none;
-font-size:16px;
-transition:all 0.3s ease;
-box-shadow:0 8px 20px rgba(0,0,0,0.15);
-}
-
-.btn:hover{
-background:#e02692;
-transform:translateY(-2px);
-}
-
-/* SECTION */
-.section{
-padding:70px 0;
-text-align:center;
-}
-
-.section h2{
-font-size:32px;
-margin-bottom:40px;
-}
-
-/* BENEFITS */
-.benefits{
-display:grid;
-grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-gap:25px;
-}
-
-.card{
-background:#fff;
-padding:30px;
-border-radius:12px;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-/* REVIEWS */
-.reviews{
-display:grid;
-grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-gap:25px;
-}
-
-.review{
-background:#fff;
-padding:25px;
-border-radius:12px;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
-}
-
-/* CTA */
-.cta{
-background:linear-gradient(90deg,#ff2ea6,#6ad6ff);
-color:white;
-text-align:center;
-padding:80px 20px;
-}
-
-.cta a{
-display:inline-block;
-margin-top:20px;
-background:white;
-color:#ff2ea6;
-padding:18px 40px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:40px 20px;
-font-size:13px;
-background:#111;
-color:#ccc;
-line-height:1.6;
-}
-
-/* MOBILE */
-@media (max-width:768px){
-.hero{
-flex-direction:column;
-text-align:center;
-}
-.hero-text h1{
-font-size:28px;
-}
-}
-
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<header>
+<div class="logo">Mitolyn Blog</div>
+</header>
 
-<div class="logo">MITOLYN</div>
-
-<section class="hero">
-
+<section class="hero fade">
 <div class="hero-text">
-<h1>Boost Your Metabolism & Support Natural Weight Loss</h1>
+<h1>Mitochondrial Health & Energy Optimization Guide</h1>
+<p>Discover evidence-based strategies to improve cellular energy, metabolic efficiency, and long-term vitality through modern science and lifestyle optimization.</p>
+</div>
 
-<p>
-Mitolyn is a premium natural formula designed to support mitochondrial health,
-enhance metabolism, and promote efficient fat burning.
+<img src="IMG-20260405-WA0008.jpg" 
+       alt="Mitolyn Bottle"
+       style="width:260px;border-radius:20px;box-shadow:0 15px 50px rgba(0,0,0,0.15);">
+</section>
+
+<!-- BLOCO DE CONFIANÇA + AFILIADO SUAVE -->
+<section class="section">
+<div class="card fade" style="text-align:center;">
+
+<img src="IMG-20260405-WA0009(1).jpg" 
+       alt="Mitolyn Supplement Natural"
+       style="width:260px;border-radius:20px;box-shadow:0 15px 50px rgba(0,0,0,0.15);">
+
+<p style="font-size:0.95rem;color:#64748b;max-width:500px;margin:auto;">
+Some readers choose to explore additional nutritional support as part of their routine. 
+For transparency, we may reference trusted external resources when relevant.
 </p>
 
-<a class="btn" href="https://51a03c8-3ap8yvegwsrgaj6vfe.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
-Order From Official Website
+<p style="margin-top:10px;">
+<a href="https://mitolyn.com/welcome/?hop=j0a0pedr0&hopId=ef85b8b3-957c-4074-831a-44eebe949687" target="_blank" style="color:#7c3aed;text-decoration:none;font-weight:600;">
+View additional details
 </a>
-</div>
+</p>
 
+</div>
 </section>
 
 <section class="section">
-<h2>Benefits of Mitolyn</h2>
+<div class="card fade">
 
-<div class="benefits">
+<h2>Understanding Mitochondrial Function</h2>
 
-<div class="card">
-<h3>🔥 Boost Metabolism</h3>
-<p>Supports calorie burning naturally.</p>
+<p>Mitochondria are responsible for producing ATP, the primary energy molecule used by the human body. Every cell depends on efficient mitochondrial function to maintain performance, cognitive clarity, and metabolic balance.</p>
+
+<p>As modern lifestyles evolve, factors such as poor sleep, processed foods, and chronic stress may negatively impact mitochondrial efficiency. This makes targeted lifestyle strategies increasingly important.</p>
+
+<h2 style="margin-top:40px;">Key Factors That Influence Energy Levels</h2>
+
+<p>Scientific research suggests that energy production is influenced by multiple variables including nutrient intake, physical activity, hormonal balance, and oxidative stress levels.</p>
+
+<div class="highlight">
+<strong>Key Insight:</strong> Sustainable energy is not about quick fixes, but consistent biological support through daily habits.
 </div>
 
-<div class="card">
-<h3>⚡ Increase Energy</h3>
-<p>Improves daily energy levels.</p>
-</div>
+<h2 style="margin-top:40px;">Evidence-Based Optimization Strategies</h2>
 
-<div class="card">
-<h3>🔥 Fat Burning</h3>
-<p>Encourages healthy fat loss.</p>
-</div>
+<p>Improving mitochondrial performance may involve:</p>
 
-<div class="card">
-<h3>🌿 Natural Formula</h3>
-<p>Carefully selected ingredients.</p>
-</div>
+<ul style="margin-top:15px;padding-left:20px;color:#475569;">
+<li>Balanced nutrition rich in micronutrients</li>
+<li>Regular physical activity and resistance training</li>
+<li>Sleep optimization and circadian rhythm alignment</li>
+<li>Stress reduction techniques</li>
+</ul>
+
+<p style="margin-top:20px;">These approaches form the foundation of long-term metabolic health and sustainable energy production.</p>
 
 </div>
-
 </section>
 
 <section class="section">
-<h2>Customer Reviews</h2>
+<div class="card fade">
+<h2 style="text-align:center;">Frequently Asked Questions</h2>
 
-<div class="reviews">
+<div class="faq">
 
-<div class="review">
-<p>"Great energy boost and noticeable results!"</p>
-<strong>Michael R.</strong>
+<div class="faq-item">
+<button class="faq-question">What is mitochondrial health?</button>
+<div class="faq-answer"><p>It refers to how efficiently your cells produce energy and maintain metabolic balance.</p></div>
 </div>
 
-<div class="review">
-<p>"Helped support my weight loss routine."</p>
-<strong>Jessica L.</strong>
+<div class="faq-item">
+<button class="faq-question">Why is energy low even with good diet?</button>
+<div class="faq-answer"><p>Factors like stress, sleep quality, and cellular efficiency all play a role beyond diet alone.</p></div>
 </div>
 
-<div class="review">
-<p>"I feel more active every day."</p>
-<strong>Daniel P.</strong>
+<div class="faq-item">
+<button class="faq-question">Can lifestyle really improve energy?</button>
+<div class="faq-answer"><p>Yes. Evidence shows consistent habits significantly impact mitochondrial performance.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Are supplements necessary?</button>
+<div class="faq-answer"><p>They are optional and should complement — not replace — healthy lifestyle foundations.</p></div>
 </div>
 
 </div>
-
-</section>
-
-<section class="cta">
-<h2>Start Your Transformation Today</h2>
-
-<a href="https://51a03c8-3ap8yvegwsrgaj6vfe.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
-Get Mitolyn Now
-</a>
-
+</div>
 </section>
 
 <footer>
+<p>© 2026 Mitolyn Blog – Educational Content Only</p>
 
-<p>© 2026 Mitolyn Review. All Rights Reserved.</p>
+<div style="margin-top:15px;">
+<a href="#" style="color:#94a3b8;margin:0 10px;text-decoration:none;">Privacy Policy</a>
+<a href="#" style="color:#94a3b8;margin:0 10px;text-decoration:none;">Terms of Service</a>
+<a href="#" style="color:#94a3b8;margin:0 10px;text-decoration:none;">Contact</a>
+</div>
 
-<p>This site is not affiliated with Google or Facebook.</p>
-
-<p>Affiliate Disclaimer: We may earn commissions from purchases.</p>
+<p style="font-size:0.8rem;margin-top:20px;color:#64748b;">
+This content is for informational purposes only and does not constitute medical advice.
+</p>
 
 </footer>
 
-</div>
+<script>
+document.querySelectorAll(".faq-question").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+  let ans=btn.nextElementSibling;
+  ans.style.maxHeight?ans.style.maxHeight=null:ans.style.maxHeight=ans.scrollHeight+"px";
+ });
+});
+
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+    entry.target.classList.add("show");
+  }
+ });
+});
+
+document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>

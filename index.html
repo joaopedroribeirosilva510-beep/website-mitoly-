@@ -1,186 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitolyn Blog | Mitochondrial Health & Longevity</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00d4ff;
+            --purple: #9b4dff;
+        }
+       
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+       
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.85;
+            color: #334155;
+            background: #f8fafc;
+        }
+       
+        header {
+            background: #0a1725;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+       
+        .top-nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+       
+        /* Logo melhorado */
+        .logo {
+            font-size: 2.45rem;
+            font-weight: 800;
+            text-decoration: none;
+            background: linear-gradient(90deg, #9b4dff 0%, #7b5eff 45%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            display: flex;
+            flex-direction: column;
+        }
+       
+        .logo .blog {
+            font-size: 2.1rem;
+            background: linear-gradient(90deg, #00d4ff, #7b5eff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: -8px;
+            font-weight: 700;
+        }
 
-<title>Mitolyn Blog | Mitochondrial Health, Energy & Metabolism Science</title>
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+       
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+       
+        .nav-links a:hover {
+            color: #00d4ff;
+        }
 
-<meta name="description" content="Explore mitochondrial health, energy optimization, metabolism science and evidence-based strategies to improve vitality and performance.">
+        .official-link {
+            font-size: 0.9rem;
+            color: #64748b;
+            text-align: center;
+            margin: 25px auto 0;
+            max-width: 820px;
+            opacity: 0.75;
+        }
+       
+        .official-link a {
+            color: #00a8cc;
+            text-decoration: none;
+        }
+       
+        .official-link a:hover {
+            text-decoration: underline;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-<style>
-:root{--primary:#7c3aed;--accent:#06b6d4;--bg:#f8fafc;}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;background:var(--bg);color:#1e293b;line-height:1.7;}
-
-header{background:white;padding:20px;display:flex;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,0.05);position:sticky;top:0;}
-.logo{font-size:26px;font-weight:800;background:linear-gradient(90deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-
-.hero{display:flex;align-items:center;justify-content:space-between;padding:100px 40px;gap:40px;background:linear-gradient(135deg,#ede9fe,#ecfeff);}
-.hero-text{max-width:600px;}
-.hero-text h1{font-size:3rem;margin-bottom:20px;}
-.hero-text p{color:#475569;}
-.hero img{width:420px;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.15);}
-
-.section{max-width:1100px;margin:80px auto;padding:0 20px;}
-.card{background:white;padding:50px;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.06);}
-
-.highlight{background:linear-gradient(135deg,#faf5ff,#ecfeff);padding:25px;border-radius:14px;margin:30px 0;}
-
-.faq-item{margin:15px 0;border-radius:12px;overflow:hidden;}
-.faq-question{width:100%;padding:20px;background:linear-gradient(90deg,#7c3aed,#06b6d4);color:white;border:none;text-align:left;font-weight:600;cursor:pointer;}
-.faq-answer{max-height:0;overflow:hidden;background:#f8fafc;transition:0.4s;padding:0 20px;}
-.faq-answer p{padding:20px 0;}
-
-.fade{opacity:0;transform:translateY(30px);transition:0.8s;}
-.fade.show{opacity:1;transform:translateY(0);}
-
-footer{background:#0f172a;color:#94a3b8;text-align:center;padding:50px;margin-top:80px;}
-
-@media(max-width:900px){
-.hero{flex-direction:column;text-align:center;}
-.hero img{width:100%;}
-}
-</style>
+        .hero {
+            background: linear-gradient(135deg, #0a1725 0%, #1e2a44 100%);
+            color: white;
+            padding: 7rem 2rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+       
+        .hero h1 {
+            font-size: 3.4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+       
+        .hero-description {
+            font-size: 1.18rem;
+            max-width: 820px;
+            margin: 0 auto;
+            opacity: 0.88;
+            line-height: 1.65;
+        }
+       
+        .main-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+       
+        .section-title {
+            font-size: 2.4rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #0f172a;
+        }
+       
+        .section-title::after {
+            content: '';
+            width: 90px;
+            height: 5px;
+            background: linear-gradient(90deg, #9b4dff, #00d4ff);
+            display: block;
+            margin: 12px auto;
+            border-radius: 3px;
+        }
+       
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+            gap: 2.2rem;
+        }
+       
+        .article-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.09);
+            transition: 0.4s;
+        }
+       
+        .article-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0, 212, 255, 0.2);
+        }
+       
+        .card-image {
+            height: 230px;
+            background-size: cover;
+            background-position: center;
+        }
+       
+        .card-content {
+            padding: 1.9rem;
+        }
+       
+        .card-category {
+            color: #00d4ff;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+        }
+       
+        .card-title {
+            font-size: 1.45rem;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+       
+        .card-excerpt {
+            color: #64748b;
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+       
+        .read-more {
+            color: #00d4ff;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+       
+        footer {
+            background: #0a1725;
+            color: #cbd5e1;
+            padding: 4.5rem 2rem 2.5rem;
+            text-align: center;
+            margin-top: 6rem;
+        }
+    </style>
 </head>
-
 <body>
+    <header>
+        <div class="top-nav">
+            <a href="index.html" class="logo">
+                Mitolyn<span class="blog">Blog</span>
+            </a>
 
-<header>
-<div class="logo">Mitolyn Blog</div>
-</header>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
 
-<section class="hero fade">
-<div class="hero-text">
-<h1>Mitochondrial Health & Energy Optimization Guide</h1>
-<p>Discover evidence-based strategies to improve cellular energy, metabolic efficiency, and long-term vitality through modern science and lifestyle optimization.</p>
+    <section class="hero">
+        <h1>Mitochondrial Health &amp; Cellular Optimization</h1>
+        <p class="hero-description">
+            Mitolyn Blog is a website focused on explaining the Mitolyn supplement, highlighting how it improves energy, metabolism, brain performance, and overall health by optimizing mitochondrial function at the cellular level.
+        </p>
+        
+        <!-- Link discreto - Official Mitolyn Website -->
+        <p class="official-link">
+            Official Mitolyn Website: 
+            <a href="https://mitolyn.com/welcome/?hop=j0a0pedr0&hopId=ef85b8b3-957c-4074-831a-44eebe949687" target="_blank" rel="noopener">
+                mitolyn.com
+            </a>
+        </p>
+    </section>
+
+    <div class="main-container">
+        <h2 class="section-title">Featured Articles</h2>
+       
+        <div class="articles-grid">
+            <!-- Article 1 -->
+            <div class="article-card">
+               <div class="card-image" style="background-image: url('iStock-925653318.jpg');">
+               </div>
+                <div class="card-content">
+                    <div class="card-category">Introduction</div>
+                    <h3 class="card-title">A Deep Dive into Mitolyns: The Cellular Powerhouse</h3>
+                    <p class="card-excerpt">Discover how Mitolyns optimizes mitochondrial function for superior energy, focus, and longevity.</p>
+                    <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="article-card">
+            <div class="card-image" style="background-image: url('coracao-pessoas-saudaveis.-webkit-background-clip');">
+                </div>
+                <div class="card-content">
+                    <div class="card-category">Neurological Health</div>
+                    <h3 class="card-title">Mitolyns and the Neurological Frontier: Fueling the Human Mind</h3>
+                    <p class="card-excerpt">How mitochondrial optimization eliminates brain fog and enhances cognitive performance.</p>
+                    <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="article-card">
+          <div class="article-card">
+               <div class="card-image" style="background-image: url('onde-posso-buscar-tratamento-para-melhorar-a-saude-do-idoso.jpg');">
 </div>
+                <div class="card-content">
+                    <div class="card-category">Athletic Performance</div>
+                    <h3 class="card-title">Peak Performance: How Mitolyns Redefines Athletic Endurance</h3>
+                    <p class="card-excerpt">Unlock superior recovery, VO₂ Max, and fat oxidation with mitochondrial support.</p>
+                    <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-<img src="IMG-20260405-WA0008.jpg" 
-       alt="Mitolyn Bottle"
-       style="width:260px;border-radius:20px;box-shadow:0 15px 50px rgba(0,0,0,0.15);">
-</section>
-
-<!-- BLOCO DE CONFIANÇA + AFILIADO SUAVE -->
-<section class="section">
-<div class="card fade" style="text-align:center;">
-
-<img src="IMG-20260405-WA0009(1).jpg" 
-       alt="Mitolyn Supplement Natural"
-       style="width:260px;border-radius:20px;box-shadow:0 15px 50px rgba(0,0,0,0.15);">
-
-<p style="font-size:0.95rem;color:#64748b;max-width:500px;margin:auto;">
-Some readers choose to explore additional nutritional support as part of their routine. 
-For transparency, we may reference trusted external resources when relevant.
-</p>
-
-<p style="margin-top:10px;">
-<a href="https://mitolyn.com/welcome/?hop=j0a0pedr0&hopId=ef85b8b3-957c-4074-831a-44eebe949687" target="_blank" style="color:#7c3aed;text-decoration:none;font-weight:600;">
-View additional details
-</a>
-</p>
-
+            <!-- Article 4 -->
+            <div class="article-card">
+                <div class="article-card">
+               <div class="card-image" style="background-image: url('emagrecimento-48.jpg');">
 </div>
-</section>
+                <div class="card-content">
+                    <div class="card-category">Longevity</div>
+                    <h3 class="card-title">The Fountain of Youth Within: Mitolyns and the Science of Longevity</h3>
+                    <p class="card-excerpt">Slow biological aging through mitophagy and mitochondrial DNA protection.</p>
+                    <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-<section class="section">
-<div class="card fade">
-
-<h2>Understanding Mitochondrial Function</h2>
-
-<p>Mitochondria are responsible for producing ATP, the primary energy molecule used by the human body. Every cell depends on efficient mitochondrial function to maintain performance, cognitive clarity, and metabolic balance.</p>
-
-<p>As modern lifestyles evolve, factors such as poor sleep, processed foods, and chronic stress may negatively impact mitochondrial efficiency. This makes targeted lifestyle strategies increasingly important.</p>
-
-<h2 style="margin-top:40px;">Key Factors That Influence Energy Levels</h2>
-
-<p>Scientific research suggests that energy production is influenced by multiple variables including nutrient intake, physical activity, hormonal balance, and oxidative stress levels.</p>
-
-<div class="highlight">
-<strong>Key Insight:</strong> Sustainable energy is not about quick fixes, but consistent biological support through daily habits.
+            <!-- Article 5 -->
+            <div class="article-card">
+               <div class="article-card">
+               <div class="card-image" style="background-image: url('plano-de-saude-sami2.jpg');">
 </div>
+                <div class="card-content">
+                    <div class="card-category">Metabolism</div>
+                    <h3 class="card-title">The Metabolic Switch: Optimizing Weight Management with Mitolyns</h3>
+                    <p class="card-excerpt">Turn your body into a fat-burning machine at the cellular level.</p>
+                    <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-<h2 style="margin-top:40px;">Evidence-Based Optimization Strategies</h2>
-
-<p>Improving mitochondrial performance may involve:</p>
-
-<ul style="margin-top:15px;padding-left:20px;color:#475569;">
-<li>Balanced nutrition rich in micronutrients</li>
-<li>Regular physical activity and resistance training</li>
-<li>Sleep optimization and circadian rhythm alignment</li>
-<li>Stress reduction techniques</li>
-</ul>
-
-<p style="margin-top:20px;">These approaches form the foundation of long-term metabolic health and sustainable energy production.</p>
-
+            <!-- Article 6 -->
+            <div class="article-card">
+              <div class="article-card">
+               <div class="card-image" style="background-image: url('10-cuidados-que-toda-pessoa-idosa-deve-ter-com-a-propria-saude.jpg');">
 </div>
-</section>
+                <div class="card-content">
+                    <div class="card-category">Gut Health</div>
+                    <h3 class="card-title">The Gut-Mitochondria Axis: Supporting a Healthy Microbiome</h3>
+                    <p class="card-excerpt">How mitochondrial energy strengthens the intestinal barrier and microbiome balance.</p>
+                    <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-<section class="section">
-<div class="card fade">
-<h2 style="text-align:center;">Frequently Asked Questions</h2>
-
-<div class="faq">
-
-<div class="faq-item">
-<button class="faq-question">What is mitochondrial health?</button>
-<div class="faq-answer"><p>It refers to how efficiently your cells produce energy and maintain metabolic balance.</p></div>
+            <!-- Article 7 -->
+            <div class="article-card">
+                <div class="article-card">
+               <div class="card-image" style="background-image: url('mulher-idosa-balanca-800x600.jpg');">
 </div>
+                <div class="card-content">
+                    <div class="card-category">Immunity</div>
+                    <h3 class="card-title">The Energetic Shield: Empowering Immune Resilience</h3>
+                    <p class="card-excerpt">Fuel your immune cells with optimal mitochondrial performance.</p>
+                    <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-<div class="faq-item">
-<button class="faq-question">Why is energy low even with good diet?</button>
-<div class="faq-answer"><p>Factors like stress, sleep quality, and cellular efficiency all play a role beyond diet alone.</p></div>
+            <!-- Article 8 -->
+            <div class="article-card">
+               <div class="article-card">
+               <div class="card-image" style="background-image: url('pesquisa_ranking_03');">
 </div>
+                <div class="card-content">
+                    <div class="card-category">Cardiovascular</div>
+                    <h3 class="card-title">The Pulse of Life: Supporting Cardiovascular Vitality</h3>
+                    <p class="card-excerpt">Keep your heart strong with powerful mitochondrial energy.</p>
+                    <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-<div class="faq-item">
-<button class="faq-question">Can lifestyle really improve energy?</button>
-<div class="faq-answer"><p>Yes. Evidence shows consistent habits significantly impact mitochondrial performance.</p></div>
+            <!-- Article 9 -->
+            <div class="article-card">
+                <div class="article-card">
+               <div class="card-image" style="background-image: url('atividades-fisicas-idosos-1500x1000-2.jpg');">
 </div>
+                <div class="card-content">
+                    <div class="card-category">Skin Health</div>
+                    <h3 class="card-title">The Mitolyns Glow: Radiant Skin Starts in the Mitochondria</h3>
+                    <p class="card-excerpt">Achieve youthful, glowing skin from the cellular level outward.</p>
+                    <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-<div class="faq-item">
-<button class="faq-question">Are supplements necessary?</button>
-<div class="faq-answer"><p>They are optional and should complement — not replace — healthy lifestyle foundations.</p></div>
+            <!-- Article 10 -->
+            <div class="article-card">
+                <div class="article-card">
+               <div class="card-image" style="background-image: url('seo-medicamento-terceira-idade.jpg');">
 </div>
+                <div class="card-content">
+                    <div class="card-category">Total Optimization</div>
+                    <h3 class="card-title">Total Human Optimization: The Future of Mitolyns</h3>
+                    <p class="card-excerpt">The complete integration of mitochondrial health across all body systems.</p>
+                    <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-</div>
-</div>
-</section>
-
-<footer>
-<p>© 2026 Mitolyn Blog – Educational Content Only</p>
-
-<div style="margin-top:15px;">
-<a href="#" style="color:#94a3b8;margin:0 10px;text-decoration:none;">Privacy Policy</a>
-<a href="#" style="color:#94a3b8;margin:0 10px;text-decoration:none;">Terms of Service</a>
-<a href="#" style="color:#94a3b8;margin:0 10px;text-decoration:none;">Contact</a>
-</div>
-
-<p style="font-size:0.8rem;margin-top:20px;color:#64748b;">
-This content is for informational purposes only and does not constitute medical advice.
-</p>
-
-</footer>
-
-<script>
-document.querySelectorAll(".faq-question").forEach(btn=>{
- btn.addEventListener("click",()=>{
-  let ans=btn.nextElementSibling;
-  ans.style.maxHeight?ans.style.maxHeight=null:ans.style.maxHeight=ans.scrollHeight+"px";
- });
-});
-
-const observer=new IntersectionObserver(entries=>{
- entries.forEach(entry=>{
-  if(entry.isIntersecting){
-    entry.target.classList.add("show");
-  }
- });
-});
-
-document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
-</script>
-
+    <footer>
+        <p style="font-size:1.8rem; font-weight:700; background: linear-gradient(90deg, #9b4dff, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom:10px;">
+            Mitolyn Blog
+        </p>
+        <p>© 2026 Mitolyn Blog • All information is for educational purposes only.</p>
+    </footer>
 </body>
 </html>

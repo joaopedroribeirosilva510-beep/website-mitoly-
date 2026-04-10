@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mitolyn Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00d4ff;
+            --purple: #9b4dff;
+        }
+       
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+       
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.85;
+            color: #334155;
+            background: #f8fafc;
+        }
+       
+        header {
+            background: #0a1725;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+       
+        .top-nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+       
+        .logo {
+            font-size: 2.45rem;
+            font-weight: 800;
+            text-decoration: none;
+            background: linear-gradient(90deg, #9b4dff 0%, #7b5eff 45%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            display: flex;
+            flex-direction: column;
+        }
+       
+        .logo .blog {
+            font-size: 2.1rem;
+            background: linear-gradient(90deg, #00d4ff, #7b5eff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: -8px;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+       
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+       
+        .nav-links a:hover {
+            color: #00d4ff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0a1725 0%, #1e2a44 100%);
+            color: white;
+            padding: 7rem 2rem 5rem;
+            text-align: center;
+        }
+       
+        .hero h1 {
+            font-size: 3.4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .main-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            background: white;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 3.5rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .contact-item {
+            margin: 2rem 0;
+            font-size: 1.35rem;
+        }
+
+        .contact-item i {
+            color: var(--primary);
+            margin-right: 12px;
+            width: 28px;
+        }
+
+        .contact-item a {
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+        footer {
+            background: #0a1725;
+            color: #cbd5e1;
+            padding: 4.5rem 2rem 2.5rem;
+            text-align: center;
+            margin-top: 6rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-nav">
+            <a href="index.html" class="logo">
+                Mitolyn<span class="blog">Blog</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Contact Us</h1>
+    </section>
+
+    <div class="main-container">
+        <div class="contact-info">
+            <h2 style="margin-bottom: 2rem; color: #0f172a;">Get in Touch</h2>
+            
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <strong>Phone:</strong> <a href="tel:8881478070">(888) 147-8070</a>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <strong>E-mail:</strong> <a href="mailto:contact@mitolyn.com">contact@mitolyn.com</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-size:1.8rem; font-weight:700; background: linear-gradient(90deg, #9b4dff, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom:10px;">
+            Mitolyn Blog
+        </p>
+        <p>© 2026 Mitolyn Blog • All information is for educational purposes only.</p>
+    </footer>
+</body>
+</html>

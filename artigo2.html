@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitolyns and the Neurological Frontier - Mitolyn Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00d4ff;
+            --purple: #9b4dff;
+            --dark: #0a1725;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.85;
+            color: #334155;
+            background: #f8fafc;
+        }
+
+        header {
+            background: var(--dark);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .top-nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.3rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2.6rem;
+            font-weight: 800;
+            text-decoration: none;
+            background: linear-gradient(90deg, #9b4dff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo .blog {
+            font-size: 2.2rem;
+            background: linear-gradient(90deg, #00d4ff, #7b5eff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: -6px;
+        }
+
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .hero-article {
+            background: linear-gradient(135deg, #0a1725 0%, #1e2a44 100%);
+            color: white;
+            padding: 7rem 2rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-article::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('coracao-pessoas-saudaveis.webp') center/cover;
+            opacity: 0.15;
+        }
+
+        .hero-article h1 {
+            font-size: 3.3rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .main-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-6px);
+            color: #00b8e0;
+        }
+
+        article {
+            background: white;
+            padding: 3rem 3.5rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+        }
+
+        article h2 {
+            font-size: 2.1rem;
+            color: #0f172a;
+            margin: 2.8rem 0 1.2rem;
+            padding-bottom: 0.8rem;
+            background: linear-gradient(to right, #9b4dff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        article h3 {
+            font-size: 1.45rem;
+            color: #1e40af;
+            margin: 2rem 0 1rem;
+        }
+
+        article p {
+            font-size: 1.12rem;
+            margin-bottom: 1.4rem;
+        }
+
+        article ul {
+            margin: 1.5rem 0;
+            padding-left: 1.8rem;
+        }
+
+        article li {
+            margin-bottom: 0.9rem;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #e0f2fe 0%, #f0f9ff 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 6px solid var(--primary);
+            margin: 2.5rem 0;
+        }
+
+        .scientist-quote {
+            font-style: italic;
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 5px solid var(--purple);
+            margin: 2.5rem 0;
+            color: #1e2937;
+        }
+
+        .formula {
+            background: #f1f5f9;
+            padding: 1.2rem;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.25rem;
+            margin: 2rem 0;
+            color: #0f172a;
+        }
+
+        footer {
+            background: var(--dark);
+            color: #cbd5e1;
+            padding: 5rem 2rem 3rem;
+            text-align: center;
+            margin-top: 6rem;
+        }
+
+        .official-link {
+            margin: 2.5rem 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-nav">
+            <a href="index.html" class="logo">Mitolyn<span class="blog">Blog</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-article">
+        <h1>Mitolyns and the Neurological Frontier<br><span style="font-size:2.1rem; opacity:0.95;">Fueling the Human Mind</span></h1>
+    </section>
+
+    <div class="main-container">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Voltar aos Artigos
+        </a>
+        
+        <article>
+            <p>The human brain is an incredibly energy-hungry organ. Despite making up only 2% of body weight, it consumes nearly 20% of the body’s total energy. This massive demand makes the brain highly dependent on optimal mitochondrial function.</p>
+
+            <div class="highlight">
+                When mitochondria in neurons begin to decline, we experience brain fog, memory issues, reduced focus, and mental fatigue. Mitolyns was specifically developed to solve this “energy crisis” in the brain.
+            </div>
+
+            <h2>The 2018 Breakthrough</h2>
+            <p>A landmark study published in the <strong>Journal of Neuroscience</strong> in 2018 showed that mitochondrial dysfunction is one of the earliest precursors to cognitive decline. This discovery revolutionized how we approach brain health and aging.</p>
+
+            <h2>Neuro-Mitochondrial Optimization</h2>
+            <p>Mitolyns uses a sophisticated delivery system designed to cross the blood-brain barrier. Once inside, it helps optimize the Mitochondrial Membrane Potential (ΔΨm), ensuring neurons have a constant and reliable supply of ATP.</p>
+
+            <div class="formula">
+                Δμ<sub>H+</sub> = FΔΨ − 2.3RTΔpH
+            </div>
+
+            <h2>Key Benefits for Brain Health</h2>
+            <ul>
+                <li><strong>Elimination of Brain Fog</strong> — Reduces reactive oxygen species in the brain</li>
+                <li><strong>Sharper Focus & Concentration</strong> — Supports production of dopamine and acetylcholine</li>
+                <li><strong>Improved Long-Term Memory</strong> — Protects and energizes the hippocampus</li>
+                <li><strong>Greater Stress Resilience</strong> — Helps the brain handle mental demands more efficiently</li>
+            </ul>
+
+            <h2>Nrf2 Pathway Activation</h2>
+            <p>One of Mitolyns’ most powerful features is its ability to activate the Nrf2 pathway — the body’s master antioxidant switch. Instead of just supplying external antioxidants, it trains your brain cells to protect themselves.</p>
+
+            <div class="scientist-quote">
+                “Mitolyns doesn’t just give the brain energy — it helps the brain defend and renew itself from within.” 
+                <br><strong>— Research Team, Mitolyns Neuro Project</strong>
+            </div>
+
+            <h2>Real-World Results</h2>
+            <p>Professionals, programmers, students, and high-performers report that after 30 days of consistent use, the dreaded “3 PM slump” disappears. They experience sustained mental energy and easier switching between complex tasks.</p>
+
+            <h2>Safety & Purity</h2>
+            <p>Every batch is rigorously tested to ensure it is free from heavy metals and neurotoxins. Mitolyns works in harmony with your natural biology rather than overriding it.</p>
+        </article>
+
+      
+    </div>
+
+    <footer>
+        <p style="font-size:2rem; font-weight:700; background: linear-gradient(90deg, #9b4dff, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom:12px;">
+            Mitolyn Blog
+        </p>
+        <p>© 2026 Mitolyn Blog • All information is for educational purposes only.</p>
+    </footer>
+</body>
+</html>
